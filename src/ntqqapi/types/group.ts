@@ -3,7 +3,7 @@ export interface GroupSimpleInfo {
   maxMember: number
   memberCount: number
   groupName: string
-  groupStatus: 0
+  groupStatus: GroupStatus
   memberRole: 2
   isTop: boolean
   toppedTimestamp: '0'
@@ -28,6 +28,12 @@ export interface GroupSimpleInfo {
   }
   createTime: string
   cmdUinMsgMask: number
+}
+
+export enum GroupStatus {
+  Enable,
+  Delete,
+  Disable
 }
 
 export enum GroupMemberRole {
